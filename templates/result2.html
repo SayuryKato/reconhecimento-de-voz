@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado da Transcrição de Áudio</title>
+</head>
+<body>
+    <h1>Resultado da Transcrição de Áudio</h1>
+
+    <h2>Áudio Enviado:</h2>
+    <audio controls>
+        <source src="{{ audio_file }}" type="audio/mp4">
+        Seu navegador não suporta a reprodução de áudio.
+    </audio>
+
+    <h2>Transcrição:</h2>
+    <p>{{ transcript }}</p>
+</body>
+</html>
