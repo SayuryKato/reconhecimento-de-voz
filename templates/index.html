@@ -2,19 +2,22 @@
 <html>
 <head>
     <title>Reconhecimento de Voz</title>
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
-    <h1>Conversor de Voz para Texto</h1>
-    <form action="/result" method="post" enctype="multipart/form-data">
-        <input type="file" name="audio" accept=".wav, .mp3, .ogg, .mp4">
-        <button type="submit">Converter</button>
-    </form>
-
-    <h1>Conversor de Texto para Voz - teste</h1>
-    <form action="/result" method="post">
-        <input type="text" name="text" placeholder="Digite o texto">
-        <button type="submit">Converter</button>
-    </form>
+    <main class="box-main">
+        <h1>Conversor de Voz para Texto</h1>
+        <form action="/result" method="post" enctype="multipart/form-data">
+            <input class="audioVoz" type="file" name="audio" accept=".wav, .mp3, .ogg, .mp4">
+            <button class="conversor" type="submit">Converter</button>
+        </form>
+    
+        <h1>Conversor de Texto para Voz</h1>
+        <form action="/result" method="post">
+            <input class="textVoz" type="text" name="text" placeholder="Digite o texto">
+            <button class="conversor" type="submit">Converter</button>
+        </form>
+    </main>
     
 </body>
 </html>

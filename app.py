@@ -2,11 +2,14 @@ from flask import Flask, request, render_template, jsonify, redirect, url_for
 import speech_recognition as sr
 from gtts import gTTS
 import pickle
+import numpy as np
+# import cv2  # Certifique-se de ter a biblioteca OpenCV instalada
 
 app = Flask(__name__)
 ## carregando o modelo para o código
-with open("reconehcimentoVoz.pickle", "rb") as file:
-    modelo_carregado = pickle.load(file)
+# with open("reconehcimentoVoz.pickle", "rb") as file:
+#     modelo_carregado = pickle.load(file)
+modelo = ''
 
 # Função para pré-processar o espectrograma para o modelo
 def preprocess_spectrogram_for_model(spectrogram):
@@ -21,10 +24,6 @@ def preprocess_spectrogram_for_model(spectrogram):
         return preprocessed_spectrogram
     except Exception as e:
         raise Exception(f"Erro ao pré-processar o espectrograma para o modelo: {str(e)}")
-
-# Função para redimensionar o espectrograma para o tamanho esperado
-import numpy as np
-import cv2  # Certifique-se de ter a biblioteca OpenCV instalada
 
 # Função para redimensionar o espectrograma para o tamanho esperado
 def resize_spectrogram(spectrogram, target_size):

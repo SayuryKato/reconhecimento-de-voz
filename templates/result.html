@@ -2,15 +2,19 @@
 <html>
 <head>
     <title>Resultado</title>
+    <link rel="stylesheet" href="../static/style.css">
+
 </head>
 <body>
-    <h1>Resultado</h1>
-    <p>{{ result }}</p>
-    <audio id="audio" controls>
-        <source src="{{ url_for('static', filename='output.mp4') }}" type="audio/mp4">
-        Seu navegador não suporta a reprodução de áudio.
-    </audio>
-    <a href="/">Voltar</a>
+    <main>
+        <!-- <h1>Resultado</h1> -->
+        <h1>{{ result }}</h1>
+        <audio id="audio" controls>
+            <source src="{{ url_for('static', filename='output.mp4') }}" type="audio/mp4">
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+        <a class="conversor" href="/">Voltar</a>
+    </main>
 </body>
 </html>
 
